@@ -33,17 +33,18 @@ class Point : IPoint
 
 class MainClass
 {
-    static void PrintPoint(IPoint p)
+    static void PrintPointDetails(IPoint p)
     {
-        Console.WriteLine("x={0}, y={1}", p.X, p.Y);
+        // Print the coordinates of the point and the distance from the origin
+        Console.WriteLine("x={0}, y={1}, distance={2}", p.X, p.Y, p.Distance);
     }
-
+    
     static void Main()
     {
         IPoint p = new Point(2, 3);
         Console.Write("My Point: ");
-        PrintPoint(p);
+        PrintPointDetails(point);
     }
 }
-// Output: My Point: x=2, y=3
+// Output: My Point: x=2, y=3, distance=3.605551275463989
 //</snippet15>
